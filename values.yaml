@@ -1,0 +1,9 @@
+favorite:
+  food: biriyani
+  flavor:
+    - chicken
+    - mutton
+    - paneer
+    - prawn
+  drink: cola
+  place: shimla
