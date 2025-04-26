@@ -1,0 +1,15 @@
+{{- with .Values.favorite }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ $.Release.Name }}-config-map
+data:
+  release: {{ $.Release.Name }}
+  food: {{ .food | title | quote }}
+  flavor: |- 
+  {{- range .flavor }}
+  f: {{ . | title | quote }}
+  {{- end }}
+  drink: {{ .drink | title | quote }}
+  place: {{ .place | title | quote }}
+{{- end }}
