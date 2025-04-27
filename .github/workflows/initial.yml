@@ -14,6 +14,7 @@ jobs:
       - name: lint
         run: |
           helm lint ./charts/
+          helm upgrade hello-world ./charts/ --install --debug --dry-run
 
 
 
