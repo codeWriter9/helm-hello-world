@@ -13,7 +13,7 @@ jobs:
           version: v3.17.0
       - name: lint
         run: |
-          helm lint ./charts/helm-chart
+          helm lint ./charts/
 
 
 
