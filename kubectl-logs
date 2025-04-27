@@ -1,0 +1,11 @@
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  2m15s                default-scheduler  Successfully assigned default/liveness-exec to controlplane
+  Normal   Pulling    2m14s                kubelet            Pulling image "registry.k8s.io/busybox:1.27.2"
+  Normal   Pulled     2m14s                kubelet            Successfully pulled image "registry.k8s.io/busybox:1.27.2" in 350ms (350ms including waiting). Image size: 694360 bytes.
+  Normal   Created    60s (x2 over 2m14s)  kubelet            Created container liveness
+  Normal   Started    60s (x2 over 2m14s)  kubelet            Started container liveness
+  Normal   Pulled     60s                  kubelet            Container image "registry.k8s.io/busybox:1.27.2" already present on machine
+  Warning  Unhealthy  15s (x6 over 100s)   kubelet            Liveness probe failed: cat: can't open '/tmp/healthy': No such file or directory
+  Normal   Killing    15s (x2 over 90s)    kubelet            Container liveness failed liveness probe, will be restarted
