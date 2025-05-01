@@ -1,2 +1,2 @@
 #!/bin/sh
-helm upgrade hello-world ./hello-world --install
+helm upgrade hello-world ./charts --install
