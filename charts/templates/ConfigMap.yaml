@@ -3,12 +3,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ $.Release.Name }}-config-map
+  {{- template "mychart.labels" $ }}
 data:
   release: {{ $.Release.Name }}
   food: {{ .food | title | quote }}
   flavor: |- 
   {{- range .flavor }}
-  f: {{ . | title | quote }}
+    -{{ . | title | quote }}
   {{- end }}
   drink: {{ .drink | title | quote }}
   place: {{ .place | title | quote }}
