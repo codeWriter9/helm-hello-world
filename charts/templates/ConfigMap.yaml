@@ -13,4 +13,9 @@ data:
   {{- end }}
   drink: {{ .drink | title | quote }}
   place: {{ .place | title | quote }}
+  {{- $files := $.Files }}
+  {{- range tuple "config1.toml" "config2.toml" "config3.toml" }}
+  {{ . }}: |-
+    {{ $files.Get . }}
+  {{- end }}
 {{- end }}
